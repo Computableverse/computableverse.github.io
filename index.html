@@ -1,0 +1,19 @@
+---
+layout: default
+title: Computable(verse)
+---
+
+<div class="home">
+    <ul class="front-posts">
+        {% for post in site.posts limit:5%}
+        <li>
+            <h1 class="text-center"><a href="{{ post.url | prepend: site.baseurl }}" class="front-title">{{ post.title }}</a></h1>
+            {{ post.excerpt }}
+            <div class="text-center"><a href="{{ post.url | prepend: site.baseurl }}">Read more...</a></div>
+        </li>
+        {% endfor %}
+    </ul>
+    <p><a href="{{ site.baseurl }}/archive/"> ALL POSTS »»</a></p>
+    <p><small> Subscribe via <a href="/feed.xml">RSS.</a></small></p>
+    <h3 style="color:#aaa">}</h3>
+</div>

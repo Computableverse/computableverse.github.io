@@ -1,0 +1,26 @@
+permalink: /blog/:title
+# Information required for feed
+title: Computable(verse)
+description: The multi-verse is computable.
+url: http://computableverse.com
+author: Mitesh Shah
+
+date_format: "%b %d, %Y"
+excerpt_separator: <!--more-->
+
+# Build settings
+
+# Read https://github.com/vmg/redcarpet/blob/v3.2.2/README.markdown#and-its-like-really-simple-to-use
+# for redcarpet extensions
+markdown: redcarpet
+redcarpet:
+  extensions: ["fenced_code_blocks", "smart", "tables", "autolink", "with_toc_data", "no_intra_emphasis", "strikethrough", "lax_spacing", "superscript", "underline", "highlight", "footnotes"]
+
+# Third-party services
+# just leave someone empty to disable it
+google_analytics:
+disqus_shortname:
+
+gems:
+    - jekyll-sitemap
+    - jekyll-feed

@@ -1,0 +1,30 @@
+---
+layout: default
+title: Mitesh Shah
+---
+
+	<!--h1 class="text-center"> What is this blog about? </h1-->
+	<h3>5 most recent posts:</h3>
+	<ul class="myList_noStyle">
+		{% for post in site.posts limit:5 %}
+  		<li>
+  			<span class="myMono myGray">{{ post.date | date: '%d %b'  }}</span> : <a href="{{ post.url }}">{{ post.title }}</a>
+  		</li>
+		{% endfor %}
+	</ul>
+	<div class="container text-center">
+		<a href="/archive/" class="myMono"> ALL POSTS »»</a>
+	</div>
+    <hr>
+    <ul class="myList_noStyle">
+    	<li>More <a href="/about">about</a> me.</li>
+    	<li>My technical blog: <a href="//computableverse.com">computableverse.com</a></li>
+	</ul>
+	<hr>
+	<div class="text-center myGray">
+		<small class="myGray"> Subscribe via <a href="/feed.xml">RSS.</a></small>
+	</div>
+	<!--ul class="myList_noStyle">
+		<li>technical blog: <a href="http://computableverse.com">http://computableverse.com</a>.</p></li>
+	</ul>
+	<hr-->

@@ -1,0 +1,26 @@
+.inline-list li{
+    display: inline;
+    padding: 0.1em 0.5em;
+}
+
+.myMono{
+    font-family: $font-mono;
+}
+.front-posts{
+    list-style: none;
+    padding: 0;
+    > li {
+        .front-title {
+            color: $text-color;
+            margin-right: 1.5rem;
+            text-decoration: none;
+        }
+        a {
+            text-decoration: dashed;
+        }
+    }
+}
+
+.text-center{
+    text-align: center;
+}

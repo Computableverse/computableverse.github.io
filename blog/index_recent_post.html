@@ -1,0 +1,40 @@
+---
+layout: default
+title: Mitesh Shah;
+---
+
+{% assign post = site.posts.first %}
+{% assign content = post.content %}
+
+<!-- This loops through the paginated posts -->
+<div class="container myPage">
+	<h1 class="text-center">
+		<a href="{{ post.url }}" class="myBlack" style="border-bottom: none">{{ post.title }}</a>
+	</h1>
+		<span class="date myGray">{{ post.date | date_to_string }}</span>
+	{% if post.category %}
+            {% for site_category in site.data.categories %}
+                {% if site_category.slug == post.category %}
+                    {% assign category = site_category %}
+                {% endif %}
+            {% endfor %}
+            {% if category %}
+                {% capture category_content %}<a href="/{{ category.slug }}/" style="color:white;border-bottom:0px;">{{ category.name }}</a>{% endcapture %}
+            {% endif %}
+        {% else %}
+            {% assign category_content = '' %}
+        {% endif %}
+        <button class="btn btn-xs btn-primary" id="myCategory" style="float:center"> :{{ category_content }}:</button>
+	<div class="content">
+		{{ content }}
+		<!--a href="{{ post.url }}#disqus_thread"></a-->
+	</div>
+<br>
+<br>
+</div>
+<div class="container">
+	<a href="/archive/"><h1 class="myMono text-center btn-default btn btn-block btn-lg"> ALL POSTS »» </h1></a>
+</div>
+<br>
+<br>
+

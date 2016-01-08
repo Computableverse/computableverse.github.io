@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://computableverse.com/blog/python-javascript-crossdomain-interaction</loc>
+    <lastmod>2015-06-25T00:00:00+05:30</lastmod>
+  </url>
+  <url>
+    <loc>http://computableverse.com/404.html</loc>
+  </url>
+  <url>
+    <loc>http://computableverse.com/about/</loc>
+  </url>
+  <url>
+    <loc>http://computableverse.com/general/</loc>
+  </url>
+  <url>
+    <loc>http://computableverse.com/blog/</loc>
+  </url>
+  <url>
+    <loc>http://computableverse.com/archive/</loc>
+  </url>
+  <url>
+    <loc>http://computableverse.com/</loc>
+  </url>
+  <url>
+    <loc>http://computableverse.com/blog/index_recent_post.html</loc>
+  </url>
+  <url>
+    <loc>http://computableverse.com/logs/</loc>
+  </url>
+  <url>
+    <loc>http://computableverse.com/python/</loc>
+  </url>
+  <url>
+    <loc>http://computableverse.com/web/</loc>
+  </url>
+</urlset>

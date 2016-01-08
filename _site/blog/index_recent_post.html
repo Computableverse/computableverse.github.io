@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- ============================================================================================-->
+<!-- **psstt** This is a secret page. You're not supposed to see this code! -->
+<!-- Go away! Last Warning! -->
+<!-- DAMN! You're a badass. -->
+<!-- Go check out the complete source at http://github.com/miteshninja/miteshninja.github.io.git -->
+<!-- ============================================================================================-->
+<head>
+    <!-- Config -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Information -->
+    <meta name="Description" CONTENT="I'm Mitesh Shah! This is my weblog. I love computers and programming.">
+    <meta name="keywords" CONTENT="Mitesh,shah,ninja,computer,developer,software,coder">
+    <meta name="author" CONTENT="Mitesh Shah">
+    <title>Mitesh Shah;</title>
+    
+    <!-- Assets -->
+    <link rel="stylesheet" href="/assets/css/main.css" async>
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <header class="site-header">
+            <h3 class="site-title"><a href="/">Computable(verse){</a></h3>
+            <nav class="site-nav">
+                /*
+                <!-- <a href="/projects/">projects</a> -->
+                <a href="/archive/">archive</a> |
+                <a href="/about/">about</a>
+                */
+            </nav>
+        </header>
+        <br>
+        
+
+
+<!-- This loops through the paginated posts -->
+<div class="container myPage">
+	<h1 class="text-center">
+		<a href="/blog/python-javascript-crossdomain-interaction" class="myBlack" style="border-bottom: none">Cross domain execution of Python scripts using JS, jQ, AJAX.</a>
+	</h1>
+		<span class="date myGray">25 Jun 2015</span>
+	
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+        
+        <button class="btn btn-xs btn-primary" id="myCategory" style="float:center"> ::</button>
+	<div class="content">
+		<p>So I&rsquo;ve been learning python scripting, and I&rsquo;ve been trying to figure out a 
+very simple and trivial question.. how do I run my python scripts online?</p>
+
+<p>Not everyone will have access to a machine with python installed, neither will 
+everyone wish to install python just to execute scripts. So I wondered if
+there was a way to run the python script on a server and obviously there is.
+It&rsquo;s also quite easy by using a framework like &lsquo;Flask&rsquo; or &#39;Bottle&rsquo; or, if you
+dare, &#39;Django&rsquo;. But the problem was that they required my whole site to be 
+on the same domain.. but that is not what I had in mind.</p>
+
+<!--more-->
+
+<p>I currently host my personal site <a href="http://miteshshah.com">miteshshah.com</a>
+via GitHub Pages, because it&rsquo;s free and natively supports Jekyll (my static
+blogging platform of choice). I wanted the input to my scripts taken from the
+user/client on this website, which will then be relayed over to my server
+which executes the python script with the respective inputs and relays back
+the result to my page @miteshshah.com/&lt;project&gt;.</p>
+
+<p>But wait a minute.. I have absolutely no idea about web development? So I
+decided to start with some simple Javascript and read this amazing introduction
+by <a href="">MDN</a>. I then realised I need to learn jQuery, AJAX, JSON, HTML headers,
+and, Python web frameworks. I was overwhelmed by the sheer amount of information
+I was about to soak in the next few days. Instead I just decided to start coding. </p>
+
+<p>I installed flask <code>sudo python3 install flask</code> and quickly got a basic web app
+running on localhost. </p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s">&quot;/&lt;int:x&gt;-&lt;int:y&gt;&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="s">&quot;Sum of x + y = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">&quot;127.0.0.1&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8800</span><span class="p">)</span>
+</code></pre></div>
+<p>I could then go to <a href="http://127.0.0.1:8800/2-3">http://127.0.0.1:8800/2-3</a> and
+I would get the following output: </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Sum of x + y = 5
+</code></pre></div>
+<p>So I got my python script running as a webapp. I know had to find a way to get
+the input for this script from the user. Like I said, I had no clue about web
+development so I started looking at forms. HTML tag <code>&lt;form&gt;</code> was a very quick
+and easy way to take input from the user and I quickly made a sample html file
+with input form for my python script.</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;title&gt;</span> test_local <span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;p&gt;</span> Sum of two numbers:  <span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;form&gt;</span>
+            Number 1 : <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">name=</span><span class="s">&quot;n1&quot;</span><span class="nt">&gt;</span>
+            number 2 : <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">name=</span><span class="s">&quot;n2&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">value=</span><span class="s">&quot;Click&quot;</span> <span class="na">onClick=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/form&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;result&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
+<p>So now I could take input from the user. I somehow had to feed this input into my python script. I first tried doing it via pure javascript alone. A little bit of searching convinced me to instead use AJAX + jQuery. </p>
+
+<p>I came up with the following solution:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">testFunc</span> <span class="p">(</span><span class="nx">form</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">form</span><span class="p">.</span><span class="nx">n1</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="nx">form</span><span class="p">.</span><span class="nx">n2</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+
+    <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+        <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;GET&#39;</span><span class="p">,</span>            
+        <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:5000/&quot;</span><span class="o">+</span><span class="nx">x</span><span class="o">+</span><span class="s2">&quot;-&quot;</span><span class="o">+</span><span class="nx">y</span><span class="p">,</span>
+        <span class="nx">contentType</span><span class="o">:</span> <span class="s1">&#39;text/plain&#39;</span><span class="p">,</span>
+        <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">,</span> <span class="nx">textStat</span><span class="p">){</span>
+            <span class="nx">response</span> <span class="o">=</span> <span class="s2">&quot;The total sum is&quot;</span> <span class="o">+</span> <span class="nx">response</span><span class="p">;</span>
+                <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.result&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>    
+            <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>This would take the answer from my python script and insert it inside the div tag with class &ldquo;.result&rdquo;, atleast it would in theory.</p>
+
+<p>Having absolutely no knowledge about JS, jQuery or AJAX. It was hard for me to debug my own code. </p>
+
+<p>There was a particular error which took me quite some time to figure out: </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">XMLHttpRequest cannot load http://127.0.0.1:8800/2-3. No &#39;Access-Control-Allow-Origin&#39; header is present on the requested resource. Origin &#39;null&#39; is therefore not allowed access.
+</code></pre></div>
+<p>This is when I learned that my sample site was not authorised to transfer/relay data on another server/host. I fixed this by including a header to the respone in my python app.</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="nd">@app.route</span><span class="p">(</span><span class="s">&quot;/&lt;int:x&gt;-&lt;int:y&gt;&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+  <span class="n">resp</span> <span class="o">=</span> <span class="n">make_response</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">))</span>
+  <span class="n">resp</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s">&#39;Access-Control-Allow-Origin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;*&#39;</span>
+  <span class="k">return</span> <span class="n">resp</span>
+</code></pre></div>
+<p>I included some more CORS code in jQuery/ajax function, but I don&rsquo;t quite understand it completely.</p>
+
+<p>The final result can be seen here: <a href="http://miteshshah.com/sample">http://miteshshah.com/sample</a>.  [EDIT: I&rsquo;ve taken this down, but you should still try this on your own. It works :P]</p>
+
+		<!--a href="/blog/python-javascript-crossdomain-interaction#disqus_thread"></a-->
+	</div>
+<br>
+<br>
+</div>
+<div class="container">
+	<a href="/archive/"><h1 class="myMono text-center btn-default btn btn-block btn-lg"> ALL POSTS »» </h1></a>
+</div>
+<br>
+<br>
+
+
+    </main>
+    
+</body>
+</html>

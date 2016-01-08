@@ -1,0 +1,32 @@
+---
+# The scss file which include files from _sass/
+---
+
+@charset "utf-8";
+
+// Overrides to Variables.
+$font-size-base: 14px;
+$font-family-base: ‘Merriweather’, Georgia, serif;
+$line-height-base: 1.6;
+
+// $link-color: #0074d9; // Dense Blue
+$meta-color: #a0a0a0;
+$border-color: #ddd;
+$border-radius-base: 4px;
+
+// Code variables
+$code-font-family: "Inconsolata-g";
+// $font-mono: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+$font-mono: $code-font-family;
+
+$font-path-file-name: {{ baseurl }}/assets/fonts/inconsolata-g-webfont;
+
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700);
+@import "color";
+@import "variables";
+@import "base";
+@import "layout";
+@import "syntax3";
+@import "custom";
+@import "fonts";
+@import "media";

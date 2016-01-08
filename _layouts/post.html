@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+{% assign post = page %}
+<article class="post">
+    <h1 class="post-header">{{ page.title }}</h1>
+    <p class="post-meta">{{ page.date | date: site.date_format }} |
+    {% if post.category %}
+        {% for post_category in post.category %}
+            {% for site_category in site.data.categories %}
+                {% if site_category.slug == post_category %}
+                    <a href="/{{ site_category.slug }}/" class="post-meta"> {{ site_category.name }}</a> 
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+    </p>
+    {{ content }}
+    <h3 style="color:#aaa">}</h3>
+    {% include comments.html %}
+</article>

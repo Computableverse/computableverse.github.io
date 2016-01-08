@@ -1,0 +1,10 @@
+// Custom local Inconsolata-g font
+@font-face {
+  font-family: $code-font-family;
+  src: url($font-path-file-name+'.eot'); /* IE9 Compat Modes */
+  src: url($font-path-file-name+'.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url($font-path-file-name+'.woff2') format('woff2'), /* Super Modern Browsers */
+       url($font-path-file-name+'.woff') format('woff'), /* Pretty Modern Browsers */
+       url($font-path-file-name+'.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url($font-path-file-name+'.svg#Inconsolata-g') format('svg'); /* Legacy iOS */
+}
