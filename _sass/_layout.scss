@@ -56,5 +56,10 @@ main {
         margin: 0;
         text-align: center;
         color: $meta-color;
+        a {
+            color: $meta-color;
+            border-bottom: 1px solid lighten($meta-color, 20%);
+            text-decoration: none;
+        }
     }
 }

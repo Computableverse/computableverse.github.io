@@ -9,15 +9,9 @@
 .front-posts{
     list-style: none;
     padding: 0;
-    > li {
-        .front-title {
-            color: $text-color;
-            margin-right: 1.5rem;
-            text-decoration: none;
-        }
-        a {
-            text-decoration: dashed;
-        }
+    .front-title{
+        color: $text-color;
+        text-decoration: none;
     }
 }
 

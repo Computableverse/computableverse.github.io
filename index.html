@@ -3,11 +3,27 @@ layout: default
 title: Computable(verse)
 ---
 
-<div class="home">
+<div class="post">
     <ul class="front-posts">
         {% for post in site.posts limit:5%}
         <li>
-            <h1 class="text-center"><a href="{{ post.url | prepend: site.baseurl }}" class="front-title">{{ post.title }}</a></h1>
+            <h1 class="text-center post-header"><a href="{{ post.url | prepend: site.baseurl }}" class="front-title">{{ post.title }}</a></h1>
+            <p class="post-meta">
+                <i>by</i>
+                <a href="http://miteshshah.com">Mitesh Shah</a>
+                <i>in</i>
+                {% if post.category %}
+                    {% for post_category in post.category %}
+                        {% for site_category in site.data.categories %}
+                            {% if site_category.slug == post_category %}
+                                <a href="/{{ site_category.slug }}/"> {{ site_category.name }}</a>
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                {% endif %}
+                <i>on</i>
+                {{ post.date | date: site.date_format }}
+            </p>
             {{ post.excerpt }}
             <div class="text-center"><a href="{{ post.url | prepend: site.baseurl }}">Read more...</a></div>
         </li>
