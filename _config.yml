@@ -19,7 +19,7 @@ redcarpet:
 # Third-party services
 # just leave someone empty to disable it
 google_analytics:
-disqus_shortname:
+disqus_shortname: "computableverse"
 
 gems:
     - jekyll-sitemap
