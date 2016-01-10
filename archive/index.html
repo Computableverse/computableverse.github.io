@@ -8,7 +8,7 @@ title: All posts
     {% if forloop.first %}
         <h3>{{ post_year }}</h3><div><ul>
     {% endif %}
-	
+
     {% if forloop.first == false %}
         {% assign previous_index = forloop.index0 | minus: 1 %}
         {% capture previous_post_year %}{{ site.posts[previous_index].date | date: '%Y' }}{% endcapture %}
@@ -16,11 +16,11 @@ title: All posts
             </ul></div><h3>{{ post_year }}</h3><div><ul>
         {% endif %}
     {% endif %}
-	
+
     <li><span class="myMono" style="margin-right:10px;">{{ post.date | date: '%d %b' }}</span><a href="{{ post.url }}" title="{{ post.title }}" class="">{{ post.title }}</a></li>
 
     {% if forloop.last %}
         </ul></div>
     {% endif %}
-    <h3 style="color:#aaa">}</h3>
 {% endfor %}
+<h3 style="color:#aaa">}</h3>

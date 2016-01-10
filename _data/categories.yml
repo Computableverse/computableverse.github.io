@@ -9,3 +9,12 @@
 
 - slug: web
   name: web
+
+- slug: setup
+  name: setup
+
+- slug: text
+  name: text
+
+- slug: tools
+  name: tools
