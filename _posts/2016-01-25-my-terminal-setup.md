@@ -5,8 +5,6 @@ title: "My terminal setup 2016"
 category: [tools, conf, setup]
 ---
 
-# My terminal setup
-
 It's a pain to remember and reconfigure my keyboard junkie setup every time I change systems, or re-install the OS.
 
 So I'm writing my process down to make it easier to bootstrap and remember.
@@ -19,7 +17,7 @@ You can find my `~/dotfiles` repository here: [https://github.com/miteshninja/do
 
 My shell of choice is 'zsh'.
 
-```shell
+```sh
 sudo apt-get install zsh
 chsh -s $(which zsh)
 ```
@@ -30,13 +28,13 @@ I have a custom [zsh cofiguration](https://github.com/MiteshNinja/dotfiles/tree/
 
 zgen being extremely easy to install and setup, the whole process of configuring my *zsh* can be automated using [this](https://github.com/MiteshNinja/dotfiles/blob/master/zsh/setup.sh) script:
 
-```shell
-if [ -f ~/.zshrc ]; then
+```sh
+if [ -e ~/.zshrc -o -L ~/.zshrc ]; then
         echo "Backing up existing .zshrc."
         mv ~/.zshrc ~/.zshrc.$(date +%F-%R).bak
 fi
 
-if [ -d ~/.config/zsh ]; then
+if [ -d ~/.config/zsh -o -L ~/.config/zsh ]; then
         echo "Backing up zsh folder"
         mv ~/.config/zsh ~/.config/zsh.$(date +%F-%R).bak
 fi
@@ -47,7 +45,7 @@ ln --symbolic -v ${DOTFILESDIR}/zsh ${HOME}/.config/
 echo "Soft linking .zshrc to ~/.zshrc"
 ln --symbolic -v ${HOME}/.config/zsh/.zshrc ${HOME}/
 
-if ! [ -f ~/zgen/zgen.zsh ]; then
+if ! [ -e ~/zgen/zgen.zsh -o -L ~/zgen/zgen.zsh ]; then
 	cd ~
 	git clone https://github.com/tarjoilija/zgen
 fi
@@ -64,7 +62,7 @@ I use 2 different terminal emulators to suit my needs.
 '[Sakura](http://www.pleyades.net/david/projects/sakura)' is a lightweight, yet configurable terminal emulator with Gtk dependencies.
 I downloaded and set it as my default terminal using:
 
-```shell
+```sh
 sudo apt-get install sakura
 sudo update-alternatives --config x-terminal-emulator
 gsettings set org.gnome.desktop.default-applications.terminal exec 'sakura'
