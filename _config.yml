@@ -12,8 +12,8 @@ excerpt_separator: <!--more-->
 
 # Read https://github.com/vmg/redcarpet/blob/v3.2.2/README.markdown#and-its-like-really-simple-to-use
 # for redcarpet extensions
-markdown: kramdown 
-highlighter: rouge 
+markdown: redcarpet 
+highlighter: pygments 
 kramdown:
         syntax_highlighter: rouge
 #redcarpet:*
