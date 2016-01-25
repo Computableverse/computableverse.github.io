@@ -11,6 +11,15 @@ So I'm writing my process down to make it easier to bootstrap and remember.
 
 You can find my `~/dotfiles` repository here: [https://github.com/miteshninja/dotfiles](https://github.com/miteshninja/dotfiles "dotfiles.git").
 
+<!--more-->
+
+---
+
+### Screenshot:
+
+![screenshot-terminal](/assets/images/terminal-01.png)
+[full size](/assets/images/terminal-01.png)
+
 ---
 
 ### Shell
