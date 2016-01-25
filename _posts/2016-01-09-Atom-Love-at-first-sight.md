@@ -15,11 +15,11 @@ I had tried Atom back in the beta days, and frankly it did not leave a remarkabl
 
 I got Atom v1.3.0 installed on by ubuntu-box and fired it up.
 
-```sh
+~~~sh
 sudo add-apt-repository ppa:webupd8team/atom
 sudo apt-get update
 sudo apt-get install atom
-```
+~~~
 
 ### First looks
 
@@ -41,7 +41,7 @@ A quick look over the top packages on their [package control site](https://atom.
 
 I decided to install these:
 
-```sh
+~~~sh
 $ sort apm-packages
 
 atom-beautify
@@ -62,13 +62,13 @@ vim-mode
 zen
 
 $ cat apm-packages | xargs apm install
-```
+~~~
 
 I'd advise you against installing all those *before* reading what they do. You can however open their respective package pages using this simple command:
 
-```sh
+~~~sh
 awk '{print "https://atom.io/packages/"$1}' apm-packages | xargs google-chrome
-```
+~~~
 
 Changed my font to **Inconsolata-G** (my current code favourite) using the `fonts` package and I was ready to go.
 

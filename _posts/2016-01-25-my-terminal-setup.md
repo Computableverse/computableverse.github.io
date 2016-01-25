@@ -9,7 +9,7 @@ It's a pain to remember and reconfigure my keyboard junkie setup every time I ch
 
 So I'm writing my process down to make it easier to bootstrap and remember.
 
-You can find my `~/dotfiles` repository here: [https://github.com/miteshninja/dotfiles](https://github.com/miteshninja/dotfiles "dotfiles.git").
+You can find my `~/dotfiles` repository [here](https://github.com/miteshninja/dotfiles "dotfiles.git").
 
 <!--more-->
 
@@ -26,10 +26,10 @@ You can find my `~/dotfiles` repository here: [https://github.com/miteshninja/do
 
 My shell of choice is 'zsh'.
 
-```sh
+~~~sh
 sudo apt-get install zsh
 chsh -s $(which zsh)
-```
+~~~
 
 I avoid using frameworks for zsh since most of them are bloated, i.e. contain a lot of excessive functions and options.
 
@@ -37,7 +37,7 @@ I have a custom [zsh cofiguration](https://github.com/MiteshNinja/dotfiles/tree/
 
 zgen being extremely easy to install and setup, the whole process of configuring my *zsh* can be automated using [this](https://github.com/MiteshNinja/dotfiles/blob/master/zsh/setup.sh) script:
 
-```sh
+~~~sh
 if [ -e ~/.zshrc -o -L ~/.zshrc ]; then
         echo "Backing up existing .zshrc."
         mv ~/.zshrc ~/.zshrc.$(date +%F-%R).bak
@@ -60,7 +60,7 @@ if ! [ -e ~/zgen/zgen.zsh -o -L ~/zgen/zgen.zsh ]; then
 fi
 
 echo "Now run 'source ~/.zshrc' to activate your settings."
-```
+~~~
 
 ---
 
@@ -68,16 +68,16 @@ echo "Now run 'source ~/.zshrc' to activate your settings."
 
 I use 2 different terminal emulators to suit my needs.
 
-'[Sakura](http://www.pleyades.net/david/projects/sakura)' is a lightweight, yet configurable terminal emulator with Gtk dependencies.
+['Sakura'](http://www.pleyades.net/david/projects/sakura) is a lightweight, yet configurable terminal emulator with Gtk dependencies.
 I downloaded and set it as my default terminal using:
 
-```sh
+~~~sh
 sudo apt-get install sakura
 sudo update-alternatives --config x-terminal-emulator
 gsettings set org.gnome.desktop.default-applications.terminal exec 'sakura'
 # if this doesn't work, run this too
 # gsettings set org.gnome.desktop.default-applications.terminal exec-arg ""
-```
+~~~
 
 I also installed and set up Guake to have a quick drop down terminal to handle quick one time commands and sometimes the music player.
 
@@ -93,7 +93,7 @@ I have a simple [configuration](https://github.com/MiteshNinja/dotfiles/tree/mas
 
 I'm currently using 2 tools for some handy shell gymnastics.
 
-**['z'](https://github.com/rupa/z)**: This handy tool keeps tracks of your 'frecency' (frequently+recently) used directories and helps you jump around.
+**['z'](https://github.com/rupa/z)**: This handy tool keeps tracks of your 'frecency (frequently+recently) used directories and helps you jump around.
 
 There are many tools available which provide such functionality, like 'autojmp', 'v', 'fasd' etc. But I found 'z' to be straight to the point and easy to install. I am currently reading the autojmp source and might try it out later (python ftw!).
 
