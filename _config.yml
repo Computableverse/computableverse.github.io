@@ -12,9 +12,12 @@ excerpt_separator: <!--more-->
 
 # Read https://github.com/vmg/redcarpet/blob/v3.2.2/README.markdown#and-its-like-really-simple-to-use
 # for redcarpet extensions
-markdown: redcarpet
-redcarpet:
-  extensions: ["fenced_code_blocks", "smart", "tables", "autolink", "with_toc_data", "no_intra_emphasis", "strikethrough", "lax_spacing", "superscript", "underline", "highlight", "footnotes"]
+markdown: kramdown 
+highlighter: rouge 
+kramdown:
+        syntax_highlighter: rouge
+#redcarpet:*
+#  extensions: ["fenced_code_blocks", "tables", "autolink", "with_toc_data", "no_intra_emphasis", "strikethrough", "lax_spacing", "superscript", "underline", "highlight", "footnotes"]
 
 # Third-party services
 # just leave someone empty to disable it
