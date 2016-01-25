@@ -1,4 +1,5 @@
 ---
+layout: post
 date: 2016-01-25
 title: "My terminal setup 2016"
 category: [tools, conf, setup]
