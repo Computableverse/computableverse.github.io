@@ -75,7 +75,7 @@ call dein#add('Shougo/deoplete.nvim')
 call deoplete#enable()
 
 autocmd FileType python nnoremap <leader>y :0,$!yapf<Cr>
-autocmd CompleteDone * pclose # To close preview window of deoplete automagically
+autocmd CompleteDone * pclose " To close preview window of deoplete automagically
 ```
 
 Feel free to checkout my [NeoVim config](https://github.com/MiteshNinja/dotfiles/tree/master/nvim) on github. 
