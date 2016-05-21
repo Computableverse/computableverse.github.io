@@ -8,14 +8,16 @@ author: Mitesh Shah
 date_format: "%b %d, %Y"
 excerpt_separator: <!--more-->
 
+twitter:
+    username: miteshninja
 # Build settings
 
 # Read https://github.com/vmg/redcarpet/blob/v3.2.2/README.markdown#and-its-like-really-simple-to-use
 # for redcarpet extensions
-markdown: redcarpet 
-highlighter: pygments 
-kramdown:
-        syntax_highlighter: rouge
+#markdown: redcarpet 
+#highlighter: pygments 
+#kramdown:
+#        syntax_highlighter: rouge
 #redcarpet:*
 #  extensions: ["fenced_code_blocks", "tables", "autolink", "with_toc_data", "no_intra_emphasis", "strikethrough", "lax_spacing", "superscript", "underline", "highlight", "footnotes"]
 
@@ -27,3 +29,4 @@ disqus_shortname: "computableverse"
 gems:
     - jekyll-sitemap
     - jekyll-feed
+    - jekyll-seo-tag
