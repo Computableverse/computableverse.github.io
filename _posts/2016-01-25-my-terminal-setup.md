@@ -17,8 +17,7 @@ You can find my `~/dotfiles` repository [here](https://github.com/miteshninja/do
 
 ### Screenshot:
 
-![screenshot-terminal](/assets/images/terminal-01.png)
-[full size](/assets/images/terminal-01.png)
+[![screenshot-terminal](/assets/images/terminal-01.png)](/assets/images/terminal-01.png)
 
 ---
 
