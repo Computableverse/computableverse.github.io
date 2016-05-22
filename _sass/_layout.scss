@@ -55,9 +55,9 @@ main {
     .post-meta {
         margin: 0;
         text-align: center;
-        color: $meta-color;
+        color: $link-color;
         a {
-            color: $meta-color;
+            color: $link-color;
             border-bottom: 1px solid lighten($meta-color, 20%);
             text-decoration: none;
         }
