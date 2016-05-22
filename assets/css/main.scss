@@ -19,6 +19,9 @@ $border-radius-base: 0.4rem;
 
 // Code variables
 $code-font-family: "Inconsolata-g";
+$code-bg: #eef; // In accordance with _syntax
+$code-color: $link-color;
+
 // $font-mono: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 $font-mono: $code-font-family;
 $font-path-file-name: {{ baseurl }}/assets/fonts/inconsolata-g-webfont;
@@ -33,9 +36,6 @@ $font-path-file-name: {{ baseurl }}/assets/fonts/inconsolata-g-webfont;
        url($font-path-file-name+'.ttf')  format('truetype'), /* Safari, Android, iOS */
        url($font-path-file-name+'.svg#Inconsolata-g') format('svg'); /* Legacy iOS */
 }
-
-$code-color: $link-color;
-$code-bg: #ddd;
 
 @import url(http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700);
 @import "color";
