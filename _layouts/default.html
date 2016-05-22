@@ -18,6 +18,9 @@
     <title>{{ page.title }}</title>
     
     <!-- Assets -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/normalize.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/skeleton.css">
+
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" async>
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
     
@@ -26,7 +29,8 @@
 </head>
 
 <body>
-    <main>
+    <div class="container">
+        <div class="row">
         <header class="site-header">
             <h3 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}{</a></h3>
             <nav class="site-nav">
@@ -37,8 +41,10 @@
                 */
             </nav>
         </header>
-        <br>
+        </div>
+        <div class="row">
         {{ content }}
+        </div>
     </main>
     {% include analytics.html %}
 </body>

@@ -12,9 +12,16 @@
     .front-title{
         color: $text-color;
         text-decoration: none;
+        border-bottom: none;
     }
 }
-
 .text-center{
     text-align: center;
+}
+.container{
+    max-width: 768px;
+}
+hr{
+    border-bottom: 5px solid $link-color;
+    width: 80%;
 }

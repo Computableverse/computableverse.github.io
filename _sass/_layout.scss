@@ -5,19 +5,20 @@ main {
     padding: 0 2rem;
 }
 .site-header {
-    color: $color-gray;
-    font-family: $code-font-family;
+    margin-top: 3rem;
+    font-family: 'Inconsolata-g';
+    margin-bottom: 3rem;
     .site-title {
         font-weight: 300;
         margin-bottom: 0px;
         > a {
-            color: $color-gray;
             text-decoration: none;
+            border-bottom: none;
         }
     }
     .site-nav {
         > a {
-            color: $color-gray;
+            border-bottom: none;
             &:hover {
                 text-decoration: none;
             }
@@ -25,7 +26,7 @@ main {
                 border-bottom: 2px solid #666;
             }
             + a {
-                // margin-left: 1rem;
+                margin-left: 1rem;
             }
         }
     }
@@ -38,7 +39,7 @@ main {
         span {
             color: $meta-color;
             margin-right: 1.5rem;
-            font-size: $font-size-small;
+            font-size: $small-font-size;
         }
         a {
             color: $text-color;
@@ -50,16 +51,19 @@ main {
     position: relative;
     .post-header {
         text-align: center;
-        margin-bottom: $base-padding-size;
+        margin-bottom: 0;
     }
     .post-meta {
-        margin: 0;
         text-align: center;
-        color: $link-color;
-        a {
-            color: $link-color;
-            border-bottom: 1px solid lighten($meta-color, 20%);
-            text-decoration: none;
+        color: $meta-color;
+        font-size: $small-font-size;
+    }
+}
+@media screen and (max-width: 48rem) {
+    .site-header {
+        .site-title,
+        .site-nav {
+            text-align: center;
         }
     }
 }
