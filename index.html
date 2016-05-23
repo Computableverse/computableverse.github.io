@@ -5,7 +5,6 @@ title: Computable(verse)
 
 <div class="post">
     <ul class="front-posts">
-        <hr>
         {% for post in site.posts limit:5%}
         <li>
             <h1 class="text-center post-header"><a href="{{ post.url | prepend: site.baseurl }}" class="front-title">{{ post.title }}</a></h1>

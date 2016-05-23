@@ -22,6 +22,30 @@ layout: default
         {{ page.date | date: site.date_format }}
     </p>
     {{ content }}
-    <h3 style="color:#aaa">}</h3>
+    <hr>
+
+    <!-- Begin MailChimp Signup Form -->
+    <div id="mc_embed_signup">
+        <form action="//ninja.us1.list-manage.com/subscribe/post?u=b6870fbde815d145973c002d7&amp;id=6d722511ce" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <h5 class="text-center">Subscribe for updates. Only ONE email/month.</h5>
+            <div id="mc_embed_signup_scroll" class="row">
+                <div class="mc-field-group eight columns">
+                    <input type="email" value="" placeholder="email address" name="EMAIL" class="required email u-full-width" id="mce-EMAIL">
+                </div>
+                <div class="four columns">
+
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b6870fbde815d145973c002d7_6d722511ce" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button-primary u-full-width"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!--End mc_embed_signup-->
+    <h3 style="color:#716da2">}</h3>
     {% include comments.html %}
 </article>

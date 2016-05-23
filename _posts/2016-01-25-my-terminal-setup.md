@@ -13,13 +13,10 @@ You can find my `~/dotfiles` repository [here](https://github.com/miteshninja/do
 
 <!--more-->
 
----
-
 ### Screenshot:
 
 [![screenshot-terminal](/assets/images/terminal-01.png)](/assets/images/terminal-01.png)
 
----
 
 ### Shell
 
@@ -61,8 +58,6 @@ fi
 echo "Now run 'source ~/.zshrc' to activate your settings."
 ~~~
 
----
-
 ### Terminal
 
 I use 2 different terminal emulators to suit my needs.
@@ -86,8 +81,6 @@ In the above 2 terminal emulators, I almost always have a [tmux](https://tmux.gi
 
 I have a simple [configuration](https://github.com/MiteshNinja/dotfiles/tree/master/tmux "dotfiles/tmux") present over in my dotfiles repo and actvating it is as simple as linking `.tmux.conf` to the `~/` $HOME directory.
 
----
-
 ### GymnasticZ
 
 I'm currently using 2 tools for some handy shell gymnastics.
@@ -98,6 +91,5 @@ There are many tools available which provide such functionality, like 'autojmp',
 
 **['fzf'](https://github.com/junegunn/fzf/)**: This one is pretty handy. It's a command line fuzzyfinder tool. It's fast, easy to pipe into, and super easy to setup. It supports fuzzy completion for bash/zsh shell and thus can work with any command  which is pretty handy imo. The reverse fuzzy search and integration with vim is a huge plus.
 
----
 
 Apart from these, I keep expanding my toolset as and when necessary. I haven't talked about `vim` or `zsh` configuration in details because that's another story for another time!
