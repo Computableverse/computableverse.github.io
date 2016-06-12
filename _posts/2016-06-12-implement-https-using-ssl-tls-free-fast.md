@@ -118,4 +118,6 @@ Now restart nginx
     sudo nginx -t && sudo nginx -s reload
 
 
-**VOILA!** That's it.
+**VOILA!** That's it. https live at [https://mitesh.ninja](https://mitesh.ninja). View full nginx conf [here](https://github.com/MiteshNinja/mitesh.ninja/blob/master/conf/mitesh.ninja.conf) :D)
+
+Note: The certificates will expire every 3 months. I haven't set up a cron job atm. I'm researching more about it, trying new stuff and will most likely roll up a small python script to handle auto renewing.
