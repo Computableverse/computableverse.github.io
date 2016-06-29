@@ -1,21 +1,26 @@
 permalink: /blog/:title
 # Information required for feed
 title: Computable(verse)
-description: The multi-verse is computable.
+description: "The multi-verse is computable. Software, programming, and computers, as intercepted by a carbon based lifeform."
 url: http://computableverse.com
-author: Mitesh Shah
+author:
+    twitter: miteshninja
 
 date_format: "%b %d, %Y"
 excerpt_separator: <!--more-->
 
 twitter:
     username: miteshninja
+
+facebook:
+    publisher: 100000855963383
+    admins: 100000855963383
 # Build settings
 
 # Read https://github.com/vmg/redcarpet/blob/v3.2.2/README.markdown#and-its-like-really-simple-to-use
 # for redcarpet extensions
-#markdown: redcarpet 
-#highlighter: pygments 
+#markdown: redcarpet
+#highlighter: pygments
 #kramdown:
 #        syntax_highlighter: rouge
 #redcarpet:*
