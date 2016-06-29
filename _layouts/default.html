@@ -12,11 +12,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Information -->
-    <meta name="Description" CONTENT="I'm Mitesh Shah! This is my weblog. I love computers and programming.">
     <meta name="keywords" CONTENT="Mitesh,shah,ninja,computer,developer,software,coder">
     <meta name="author" CONTENT="Mitesh Shah">
-    <title>{{ page.title }}</title>
 
+    <!-- seo tags plugin -->
+    {% seo %}
+    
     <!-- Assets -->
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/normalize.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/skeleton.css">
@@ -24,8 +25,6 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" async>
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
-    <!-- seo tags plugin -->
-    {% seo %}
 </head>
 
 <body>
