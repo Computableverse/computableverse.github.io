@@ -9,6 +9,16 @@ author:
 date_format: "%b %d, %Y"
 excerpt_separator: <!--more-->
 
+defaults:
+  -
+    scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Mitesh Shah" # Set this to default author
+
+
 twitter:
     username: miteshninja
 
