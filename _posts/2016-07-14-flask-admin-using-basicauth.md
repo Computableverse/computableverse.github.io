@@ -4,6 +4,8 @@ title: Secure flask-admin using flask-basicauth
 
 I could not find a way to protect my flask-admin installation at `/admin` using `Flask-BasicAuth`, so I decided to write this for future explorers!
 
+<!--more-->
+
 The flask-admin docs praise the simplicity and awesomeness of using HTTP basic authentication, and also point the user towards a small extenstion which makes this easy process even easier.
 
 > The simplest form of authentication is HTTP Basic Auth. It doesn’t interfere with your database models, and it doesn’t require you to write any new view logic or template code.
