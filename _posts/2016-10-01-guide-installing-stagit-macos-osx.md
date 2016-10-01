@@ -4,6 +4,10 @@ date: 2016-10-01
 category: [guide]
 ---
 
+Stagit, a git web viewer, is relatively hard to find (at least it was for me), but I quickly fell in love with the simplicity. It's easy to use, looks decent, and best of all it's static. So here's a small guide to install it on macOS because, well, do people even remember how to build and install programs without a package manager? :P
+
+<!--more-->
+
 1. First we need to install `libgit2` dependency of `stagit`
     
         brew install libgit2
