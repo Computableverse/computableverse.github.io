@@ -63,8 +63,12 @@ clean:
 We're almost done. Now just run `make all` in `/notes` and all your
 *markdown* files will be built into *html* files. 
 
-Run `make clean` to remove all the html files and un `make tar` to 
+Run `make clean` to remove all the html files and run `make tar` to 
 backup all your notes.
+
+Simply open your browser and type "/notes" (or your complete
+path) into the address bar and voila! It's not pretty but it
+works. (PS: use `file:///path/to/folder` if not using chrome)
 
 ---
 
@@ -74,8 +78,7 @@ command as follows:
 
 ```
 cd /notes
-wget
-"https://raw.githubusercontent.com/oxalorg/sakura/master/sakura.css"
+wget "https://raw.githubusercontent.com/oxalorg/sakura/master/sakura.css"
 pandoc --css /notes/sakura.css --from markdown --to html $< -o $@
 ```
 
