@@ -16,6 +16,8 @@ my personal static site generator, but dissed it as too heavy.
 I decided then, that I wanted something I could hack together in
 the next 10 minutes.
 
+<!--more-->
+
 I immediately thought of [pandoc](https://pandoc.org).
 
 ```
