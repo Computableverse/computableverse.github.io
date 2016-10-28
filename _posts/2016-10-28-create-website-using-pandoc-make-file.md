@@ -54,10 +54,10 @@ all: $(HTML)
     pandoc --from markdown --to html $< -o $@
 
 tar: $(MARKDOWN)
-	tar --exclude=notes.tar.gz --exclude=.git/ -czvf notes.tar.gz ./
+    tar --exclude=notes.tar.gz --exclude=.git/ -czvf notes.tar.gz ./
 
 clean:
-	rm $(HTML)
+    rm $(HTML)
 ```
 
 We're almost done. Now just run `make all` in `/notes` and all your
@@ -73,6 +73,9 @@ To make your files more pretty use my minimal css theme
 command as follows:
 
 ```
+cd /notes
+wget
+"https://raw.githubusercontent.com/oxalorg/sakura/master/sakura.css"
 pandoc --css /notes/sakura.css --from markdown --to html $< -o $@
 ```
 
