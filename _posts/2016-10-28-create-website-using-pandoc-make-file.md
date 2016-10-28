@@ -79,9 +79,13 @@ wget
 pandoc --css /notes/sakura.css --from markdown --to html $< -o $@
 ```
 
-That's the basics. I added a couple more feature including making automatic
-indexes, sorting using title, metadata parsing etc. But I quickly realised
-that it's a lot of pain to be doing it using *only* GNU Make. So I've decided
-to start working on `dystic` again. Maybe even re-write it in `nim` or `golang`.
+That's the basics. This can easily be used to create your own
+blog, websites, small projects, pretty much anything.
+
+I added a couple more feature including making automatic
+indexes, sorting using title/date, metadata parsing etc. But I
+quickly realised that it's a lot of pain to be doing it using
+*only* GNU Make. So I've decided to start working on `dystic`
+again. Maybe even re-write it in `nim` or `golang`.
 
 Let me know your comments below.
