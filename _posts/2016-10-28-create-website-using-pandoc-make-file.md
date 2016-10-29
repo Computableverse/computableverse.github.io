@@ -82,8 +82,19 @@ wget "https://raw.githubusercontent.com/oxalorg/sakura/master/sakura.css"
 pandoc --css /notes/sakura.css --from markdown --to html $< -o $@
 ```
 
+Now you can remote sync the entire website easily using rsync:
+
+```
+rsync --exclude '*.md' source/ destination/
+```
+
 That's the basics. This can easily be used to create your own
-blog, websites, small projects, pretty much anything.
+blog, websites, small projects, pretty much anything. The
+best part being that it needs no 'rules' from your end,
+you're free to structure your content anyway you like; something
+which is missing from almost every static site generator out
+there. This is one of my quibbles which I'm trying to fix with
+[dystic](https://github.com/oxalorg/dystic).
 
 I added a couple more feature including making automatic
 indexes, sorting using title/date, metadata parsing etc. But I
